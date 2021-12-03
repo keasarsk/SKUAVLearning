@@ -7,7 +7,6 @@
 import asyncio
 # 编写并发代码的库
 # 高性能异步框架的基础
-# 高性能一部框架的基础
 
 from mavsdk import System
 

@@ -12,6 +12,7 @@ import asyncio
 from mavsdk.camera import (CameraError, Mode)
 from mavsdk import System
 
+
 async def print_mode(drone):
     async for mode in drone.camera.mode():
                     # camera.mode() Subscribe to camera mode updates.
@@ -20,8 +21,19 @@ async def print_mode(drone):
 
 async def print_status(drone):
     async for status in drone.camera.status():
-                    # camera.status() Subscribe to camera status updates.摄像头状态
+                    # camera.status() Subscribe to camera status updates.摄像头最新状态
         print(status)
+
+# async def run():
+#     drone = System()
+#     await drone.connect(system_address="udp://:14540")
+#
+#     print("Waiting for drone to connect...")
+#     async for state in drone.core.connection_state():
+#         if state.is_connected:
+#             print(f"Drone discovered!")
+#             break
+#
 
 
 async def run():
